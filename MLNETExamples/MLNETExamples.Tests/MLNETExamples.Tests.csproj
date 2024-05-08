@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MLNETExamples\MLNETExamples.csproj" />
+      <ProjectReference Include="..\MLNETExamples.ConsoleApp\MLNETExamples.ConsoleApp.csproj" />
     </ItemGroup>
 
 </Project>

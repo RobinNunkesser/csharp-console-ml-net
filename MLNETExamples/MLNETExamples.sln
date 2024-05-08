@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNETExamples", "MLNETExamples\MLNETExamples.csproj", "{38462837-63AD-4C1C-9C0D-1AEBB7D871D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNETExamples.ConsoleApp", "MLNETExamples.ConsoleApp\MLNETExamples.ConsoleApp.csproj", "{38462837-63AD-4C1C-9C0D-1AEBB7D871D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNETExamples.Tests", "MLNETExamples.Tests\MLNETExamples.Tests.csproj", "{1CA3620C-B825-444E-AEA8-8B4E22271579}"
 EndProject

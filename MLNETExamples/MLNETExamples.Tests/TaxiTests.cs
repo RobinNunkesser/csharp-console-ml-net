@@ -3,7 +3,7 @@ using MLNETExamples.ConsoleApp;
 
 namespace MLNETExamples.Tests;
 
-public class Tests
+public class TaxiTests
 {
     [SetUp]
     public void Setup()
