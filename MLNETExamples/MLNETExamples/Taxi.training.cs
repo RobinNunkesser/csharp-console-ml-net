@@ -15,7 +15,7 @@ namespace MLNETExamples.ConsoleApp
 {
     public partial class Taxi
     {
-        public const string RetrainFilePath =  @"/Users/nunkesser/Projects/myMLApp/taxi-fare-train.csv";
+        public const string RetrainFilePath =  @"taxi-fare-train.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;

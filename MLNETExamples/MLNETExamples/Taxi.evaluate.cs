@@ -115,7 +115,7 @@ namespace MLNETExamples.ConsoleApp
                             .WithLine(Line.init(Width: 1.5));
 
             var chartWithValuesAndIdealLine = Chart.Combine(new[] { trueAndPredictedValues, perfectLineGraph });
-            var chartFilePath = folderPath + "\\RegressionChart.html";
+            var chartFilePath = folderPath + "RegressionChart.html";
 
             chartWithValuesAndIdealLine.SaveHtml(chartFilePath);
         }

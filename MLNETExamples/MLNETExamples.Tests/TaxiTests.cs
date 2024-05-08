@@ -1,3 +1,4 @@
+using Microsoft.ML;
 using MLNETExamples.ConsoleApp;
 
 namespace MLNETExamples.Tests;
@@ -23,5 +24,15 @@ public class Tests
         };
         var predictionResult = Taxi.Predict(sampleData);
         Assert.That(predictionResult.Score, Is.InRange(16.96,16.97));
+    }
+
+    [Test]
+    public void PlotRSquared()
+    {
+        var mlContext = new MLContext();
+
+        var data = Taxi.LoadIDataViewFromFile(mlContext, Taxi.RetrainFilePath, Taxi.RetrainSeparatorChar, Taxi.RetrainHasHeader, Taxi.RetrainAllowQuoting);
+        var mlModel = mlContext.Model.Load(Taxi.MLNetModelPath, out var _);
+        Taxi.PlotRSquaredValues(data, mlModel,@"fare_amount","./");
     }
 }
