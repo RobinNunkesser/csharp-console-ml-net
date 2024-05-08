@@ -65,7 +65,7 @@ namespace MLNETExamples.ConsoleApp
             var trueValues = testResults.GetColumn<uint>(labelColumnName).ToArray();
 
             // Get the predicted values from the test results
-            var predictedValues = testResults.GetColumn<float[]>("Score").Select(score => score[0]>=0.5?2:1).ToArray();
+            var predictedValues = testResults.GetColumn<float[]>("Score").Select(score => score[0]>=0.5?1:2).ToArray();
 
             var mcr = 0F;
 

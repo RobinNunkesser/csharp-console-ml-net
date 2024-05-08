@@ -115,7 +115,9 @@ namespace MLNETExamples.ConsoleApp
 
         #endregion
 
-        public static string MLNetModelPath = Path.GetFullPath("restaurantRetrain.mlnet");
+        public static string MLNetModelPath = Path.GetFullPath("Restaurant.mlnet");
+        public static string MLNetCompleteModelPath = Path.GetFullPath("RestaurantComplete.mlnet");
+        public static string MLNet5xModelPath = Path.GetFullPath("Restaurant5x.mlnet");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 

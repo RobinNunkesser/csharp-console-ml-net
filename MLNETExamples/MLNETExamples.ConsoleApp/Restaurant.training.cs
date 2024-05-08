@@ -15,6 +15,7 @@ namespace MLNETExamples.ConsoleApp
     public partial class Restaurant
     {
         public const string RetrainFilePath =  @"restaurant.csv";
+        public const string RetrainCompleteFilePath =  @"restaurantcompletecoded.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
