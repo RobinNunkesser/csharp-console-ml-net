@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.ML.Data;
 
 namespace MLNETExamples.ConsoleApp;
@@ -26,6 +27,10 @@ public partial class Iris
         [LoadColumn(3)]
         [ColumnName(@"PetalWidth")]
         public float PetalWidth { get; set; }
+        
+        [LoadColumn(4)]
+        [ColumnName(@"Label")]
+        public string Label { get; set; }
     }
 
     #endregion
@@ -45,4 +50,6 @@ public partial class Iris
     }
 
     #endregion
+    
+    public static string MLNetModelPath = Path.GetFullPath("Iris.mlnet");
 }
