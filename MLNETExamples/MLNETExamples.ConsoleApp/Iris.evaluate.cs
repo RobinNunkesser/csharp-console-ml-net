@@ -28,22 +28,20 @@ public partial class Iris
         
         
         var mcr = 0F;
-
-        for (int i = 0; i < predictedValues.Length; i++)
+        
+        var setosaLabel = (int)predictedValues.Take(50).GroupBy(x => x).OrderByDescending(g => g.Count()).First().Key;
+        var versicolorLabel = (int)predictedValues.Skip(50).Take(50).GroupBy(x => x).OrderByDescending(g => g.Count()).First().Key;
+        var virginicaLabel = (int)predictedValues.Skip(100).Take(50).GroupBy(x => x).OrderByDescending(g => g.Count()).First().Key;
+        
+        for (var i = 0; i < predictedValues.Length; i++)
         {
-            var label = -1;
-            switch (trueValues[i])
+            var label = trueValues[i] switch
             {
-                case "Iris-setosa":
-                    label=2;
-                    break;
-                case "Iris-versicolor":
-                    label = 1;
-                    break;
-                case "Iris-virginica":
-                    label = 3;
-                    break;
-            }
+                "Iris-setosa" => setosaLabel,
+                "Iris-versicolor" => versicolorLabel,
+                "Iris-virginica" => virginicaLabel,
+                _ => -1
+            };
             {
                 
             }
